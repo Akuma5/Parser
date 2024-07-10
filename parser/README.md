@@ -1,21 +1,26 @@
-Это веб парсер, который асинхронно берет данные о 
-квартирах свыше 3 000 000 сом с сайта house.kg. А именно
-ссылку на обьявление, описание, цену, номер телефона и 
-имя пользователя. Записывает данные в postgresql. 
-Обернутый в docker.
+# Getting Started with Create React App
 
-Чтобы запустить проект через docker используем: docker compose up
+## Available Scripts
 
-Файл parser.py принимает аргумент, это номер страницы, на которой 10 обьявлений, до которой нужно пропарсить.
-Если передать аргумент 5 то парсить будет до 5 страницы включительно. Также если вы уже передавали аргумент 1,
-а теперь передаете его снова, вместо 1 страницы будет парсить 2-ую и тд.
-Чтобы запустить этот файл введите: python parser.py [int_arg]
+In the project directory, you can run:
 
-Файл create_table_apartmants.py создает таблицу apartments в postgres.
-Чтобы запустить этот файл введите: python create_table_apartmants.py
+### `docker compose up`
 
-Файл delete_table.py удаляет таблицу apartments.
-Чтобы запустить этот файл введите: python delete_table.py
+Runs a dockerfile which executes the commands: `parser.py 1` and `get_data.py`
 
-Файл get_data.py выводит данные таблицы apartments в удобном формате .
-Чтобы запустить этот файл введите: python get_data.py
+### `parser.py [int]`
+
+Executed with a number argument.\
+The number is the number of pages that need to be processed on the [https://www.house.kg/](https://www.house.kg/kupit-kvartiru?rooms=3&region=1&town=2&price_from=30%27f%2700000&currency=1&sort_by=upped_at%20desc&page=1) website
+
+### `get_data.py`
+
+Provides data on apartments in Bishkek in sorted form
+
+### `create_table_apartmants.py`
+
+Creates a table apartments
+
+### `ddelete_table.py`
+
+Deletes the apartments table
