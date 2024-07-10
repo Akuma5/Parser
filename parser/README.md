@@ -21,6 +21,6 @@ Provides data on apartments in Bishkek in sorted form
 
 Creates a table apartments
 
-### `ddelete_table.py`
+### `delete_table.py`
 
 Deletes the apartments table
