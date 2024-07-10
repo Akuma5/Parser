@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting started with a Python application
 
 ## Available Scripts
 
