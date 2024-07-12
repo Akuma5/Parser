@@ -1,0 +1,14 @@
+version: '3'
+services:
+  app:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: suppliers
+      POSTGRES_USER: usersql
+      POSTGRES_PASSWORD: folk_user1
+    ports:
+      - "8080:5432"
+  parser_app:
+    build: .
+    depends_on:
+      - app
